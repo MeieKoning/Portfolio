@@ -469,9 +469,9 @@ export default function QuestBoard() {
           <div className={styles.unlockedCard}>
             <div className={styles.hexIcon}>⬡</div>
             <h3>The System Recognizes You</h3>
-            <p>All challenges cleared. A sealed realm now awaits your entry.</p>
+            <p>All challenges cleared. You are ready to ascend.</p>
             <a href="/secret" className="btn btn-primary btn-large">
-              Enter the Void →
+              Ascend →
             </a>
           </div>
         </div>

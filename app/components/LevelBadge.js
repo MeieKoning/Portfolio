@@ -22,7 +22,7 @@ export default function LevelBadge() {
       </div>
       {level === 5 && (
         <Link href="/secret" className={styles.enterBtn}>
-          Enter the Void →
+          Ascend →
         </Link>
       )}
     </div>
