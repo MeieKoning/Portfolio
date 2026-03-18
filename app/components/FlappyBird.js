@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState, useCallback } from 'react';
+import { useLevel } from '../context/LevelContext';
 import styles from './FlappyBird.module.css';
 
 // ── Canvas dimensions ────────────────────────────────────────
@@ -9,8 +10,8 @@ const W = 480, H = 540;
 // ── Bird ─────────────────────────────────────────────────────
 const BIRD_X   = 90;
 const BIRD_R   = 14;
-const GRAVITY  = 0.27;
-const FLAP_VEL = -7.5;
+const GRAVITY  = 0.25;
+const FLAP_VEL = -6.8;
 
 // ── Pipes ────────────────────────────────────────────────────
 const PIPE_W     = 58;
@@ -121,6 +122,7 @@ function drawScene(ctx, g) {
 
 // ── Component ─────────────────────────────────────────────────
 export default function FlappyBird() {
+  const { activeChallenge } = useLevel();
   const canvasRef  = useRef(null);
   const rafRef     = useRef(null);
   const gameRef    = useRef(null);   // live mutable game state
@@ -237,6 +239,7 @@ export default function FlappyBird() {
   // Keyboard listener
   useEffect(() => {
     const onKey = (e) => {
+      if (activeChallenge) return; // yield keys to active quest challenge
       if (e.code === 'Space' || e.code === 'ArrowUp') {
         e.preventDefault();
         flap();

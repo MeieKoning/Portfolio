@@ -1,5 +1,7 @@
 import { Inter } from 'next/font/google';
 import './globals.css';
+import { LevelProvider } from './context/LevelContext';
+import LevelBadge from './components/LevelBadge';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -14,7 +16,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.variable}>{children}</body>
+      <body className={inter.variable}>
+        <LevelProvider>
+          {children}
+          <LevelBadge />
+        </LevelProvider>
+      </body>
     </html>
   );
 }
