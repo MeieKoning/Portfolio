@@ -85,7 +85,8 @@ function TypingChallenge({ onComplete }) {
             typed === undefined ? styles.charPending :
             typed === ch        ? styles.charOk      :
                                   styles.charBad;
-          return <span key={i} className={cls}>{ch}</span>;
+          // Render space as non-breaking space so it has visible width in a flex container
+          return <span key={i} className={cls}>{ch === ' ' ? '\u00A0' : ch}</span>;
         })}
       </div>
       <input

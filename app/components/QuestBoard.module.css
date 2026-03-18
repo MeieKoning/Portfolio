@@ -290,11 +290,10 @@
   color: var(--text-secondary);
   caret-color: var(--purple-400);
   font-family: 'JetBrains Mono', monospace;
-  font-size: 16px;
+  font-size: 18px;
   letter-spacing: 0.5px;
   outline: none;
   transition: border-color 0.2s;
-  font-family: inherit;
 }
 
 .typingInput:focus {
