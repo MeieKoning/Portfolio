@@ -9,8 +9,8 @@ const W = 480, H = 540;
 // ── Bird ─────────────────────────────────────────────────────
 const BIRD_X   = 90;
 const BIRD_R   = 14;
-const GRAVITY  = 0.46;
-const FLAP_VEL = -9.5;
+const GRAVITY  = 0.27;
+const FLAP_VEL = -7.5;
 
 // ── Pipes ────────────────────────────────────────────────────
 const PIPE_W     = 58;
