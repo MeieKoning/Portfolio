@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(brew install:*)",
+      "Bash(gh auth:*)",
+      "Bash(git init:*)",
+      "Bash(git branch:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(gh repo:*)",
+      "Bash(git push:*)",
+      "Read(//Users/meiekoning/Desktop/Claude/**)",
+      "Bash(npx create-next-app@latest portfolio-app --js --app --no-tailwind --no-eslint --no-src-dir --import-alias \"@/*\" --yes)",
+      "Bash(cp -r /Users/meiekoning/Desktop/Claude/portfolio-app/. /Users/meiekoning/Desktop/Claude/Portfolio/)",
+      "Bash(rm -rf /Users/meiekoning/Desktop/Claude/portfolio-app)",
+      "Bash(npm install:*)"
+    ]
+  }
+}
