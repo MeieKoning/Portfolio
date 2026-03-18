@@ -26,6 +26,7 @@ export default function Nav() {
       <ul className={styles.links}>
         <li><a href="#about"    onClick={e => handleScroll(e, 'about')}>About</a></li>
         <li><a href="#projects" onClick={e => handleScroll(e, 'projects')}>Projects</a></li>
+        <li><a href="#game"     onClick={e => handleScroll(e, 'game')}>Game</a></li>
         <li><a href="#contact"  onClick={e => handleScroll(e, 'contact')}>Contact</a></li>
       </ul>
     </nav>
